@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tic-Tac-Toe</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background-color: aliceblue;
+        }
+        .row{
+            display: flex;
+            background-color: white;
+        }
+        .cell{
+            background-size: 70%, contain;
+            background-repeat: no-repeat;
+            background-position: center;
+            padding: 4rem;
+            border: 1px solid black;
+        }
+        #players{
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 1rem;
+        }
+        #players .col{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 1rem; 
+        }
+        #resetBox{
+            margin: 1rem;
+            text-align: center;
+        }
+        button{
+            padding: 0.5rem 1rem;
+            background-color: aqua;
+            border-radius: 1rem;
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <div id="players">
+            <div>
+                <img src="./icons/circle.png" alt="" width="20rem">
+                <h2>Player 1</h2>
+            </div>
+            <div>
+                <h1></h1>
+            </div>
+            <div>
+                <img src="./icons/cross.png" alt="" width="20rem">
+                <h2>Player 2</h2>
+            </div>
+        </div>
+        <div id="col">
+            <div class="row">
+                <div data-no="1" class="cell"></div>
+                <div data-no="2" class="cell"></div>
+                <div data-no="3" class="cell"></div>
+            </div>
+            <div class="row">
+                <div data-no="4" class="cell"></div>
+                <div data-no="5" class="cell"></div>
+                <div data-no="6" class="cell"></div>
+            </div>
+            <span></span>
+            <div class="row">
+                <div data-no="7" class="cell"></div>
+                <div data-no="8" class="cell"></div>
+                <div data-no="9" class="cell"></div>
+            </div>
+        </div>
+        <div id="resetBox">
+            <button id="reset" type="reset">Reset</button>
+            </div>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
